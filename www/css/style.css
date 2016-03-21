@@ -1,0 +1,43 @@
+
+/* nette */
+#ajax-spinner {
+	margin: 15px 0 0 15px;
+	padding: 13px;
+	background: white url('../images/spinner.gif') no-repeat 50% 50%;
+	font-size: 0;
+	z-index: 123456;
+	display: none;
+}
+
+div.flash {
+	color: black;
+	background: #FFF9D7;
+	border: 1px solid #E2C822;
+	padding: 1em;
+	margin: 1em 0;
+}
+
+a[href^="#error:"] {
+	background: red;
+	color: white;
+}
+
+form .required label {
+	font-weight: bold;
+}
+
+form .error {
+	color: #D00;
+	font-weight: bold;
+}
+
+table.matrix {
+  border-collapse: collapse;
+}
+
+.matrix td {
+  background: whitesmoke;
+  border: 1px solid black;
+  text-align: right;
+  padding: 6px 10px 6px 10px;
+}

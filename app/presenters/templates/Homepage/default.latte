@@ -1,0 +1,52 @@
+{block title}
+    <title>Výpočet inverzní matice</title>
+{/block}
+
+{block content}
+<div id="content" style="width: 800px; margin: 0 auto; min-height: 800px; border: 1px solid black; padding: 10px; ">
+    <p style="text-align: right;"><a n:href="Homepage:default">Homepage</a></p>
+    <h2>Výpočet inverzní matice</h2>
+    <p>Výpočet inverzní matice pomocí Gauss-Jordanovy eliminační metody</p>
+
+    {form matrixForm}
+        <div id="formData">
+        {label dimension /}
+        {input dimension}
+        {label send /}
+        {input send}
+        </div>
+    {/form}
+    <hr />
+
+    {if $userMatrix}
+      <p>Zadaná matice:</p>
+      <table class="matrix">
+      {foreach $userMatrix as $i}
+        <tr>
+        {foreach $i as $j}
+          <td>{$j == '' ? 0 : $j}</td>
+        {/foreach}
+        </tr>
+      {/foreach}
+      </table>
+    {/if}
+    
+    {if $inverseMatrix AND count($inverseMatrix) > 0}
+      <p>Inverzní matice:</p>
+      <table class="matrix">
+      {foreach $inverseMatrix as $i}
+        <tr>
+        {foreach $i as $j}
+          <td>{$j}</td>
+        {/foreach}
+        </tr>
+      {/foreach}
+      </table>
+    {/if}
+    
+    {if $inverseMatrix === FALSE}
+      <p>Inverzní matice neexistuje.</p>
+    {/if}
+    
+</div>
+{/block}

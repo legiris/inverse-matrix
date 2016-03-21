@@ -49,7 +49,7 @@ class HomepagePresenter extends BasePresenter
 
 		$form = new Nette\Application\UI\Form();
 		$form->addSelect('dimension', 'Vyberte rozměr matice:', $dimensions)
-			->setDefaultValue(2)
+			->setDefaultValue(3)
 			->setHtmlId('dimension');
 		$form->addSubmit('send', 'Inverzní matice');
     
